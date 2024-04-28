@@ -63,3 +63,7 @@ pip3 install tqdm
   - GitHub: [`composable-models/llm_multiagent_debate`](https://github.com/composable-models/llm_multiagent_debate/tree/main)
 - Reflexion: Language Agents with Verbal Reinforcement Learning ([NeurIPS 2024](https://neurips.cc/virtual/2023/poster/70114))
   - GitHub: [`noahshinn/reflexion`](https://github.com/noahshinn/reflexion)
+
+
+### Future Work
+* attention on agents

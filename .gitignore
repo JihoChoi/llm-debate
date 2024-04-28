@@ -9,11 +9,14 @@ env/
 openai-env/
 .vscode/
 
+deprecated/
 
 temp/
 keys/
 results/
 datasets/
+
+*_backup_*
 
 # KEYS
 src/open_ai.py

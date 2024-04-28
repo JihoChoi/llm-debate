@@ -135,42 +135,42 @@ if __name__ == "__main__":
         print(f"question_prompt: {question_prompt}")
         print(f"----------------------------------")
 
-        # # ------------------
-        # # multi-agent debate
-        # # ------------------
-        # for round in range(rounds):
-        #     print(f"Debate - Round: [{round + 1}/{rounds}]")
-        #     for i, agent_context in enumerate(agent_contexts):
+        # ------------------
+        # multi-agent debate
+        # ------------------
+        for round in range(rounds):
+            print(f"Debate - Round: [{round + 1}/{rounds}]")
+            for i, agent_context in enumerate(agent_contexts):
 
-        #         if round != 0:
-        #             # [round 0] 을 제외하고는 모든 round에 다른 agent의 결과 취합
-        #             agent_contexts_other = agent_contexts[:i] + \
-        #                 agent_contexts[i + 1:]
-        #             message = construct_message_debate(
-        #                 agent_contexts_other, question_prompt, 2 * round - 1
-        #             )
-        #             agent_context.append(message)
-        #             print(f"[agent {i} ( in)]: {message}")
+                if round != 0:
+                    # [round 0] 을 제외하고는 모든 round에 다른 agent의 결과 취합
+                    agent_contexts_other = agent_contexts[:i] + \
+                        agent_contexts[i + 1:]
+                    message = construct_message_debate(
+                        agent_contexts_other, question_prompt, 2 * round - 1
+                    )
+                    agent_context.append(message)
+                    print(f"[agent {i} ( in)]: {message}")
 
-        #         completion = generate_answer(agent_context)
-        #         assistant_message = construct_assistant_message(completion)
-        #         print(f"[agent {i} (out)]: {assistant_message}")
-        #         agent_context.append(assistant_message)
-        #         # print("completion:", completion)
+                completion = generate_answer(agent_context)
+                assistant_message = construct_assistant_message(completion)
+                print(f"[agent {i} (out)]: {assistant_message}")
+                agent_context.append(assistant_message)
+                # print("completion:", completion)
 
-        # ---------------
-        # self-reflection
-        # ---------------
-        print(f"Reflection")
-        for i, agent_context in enumerate(agent_contexts):
-            message = construct_message_reflection()
-            print(f"[agent {i} ( in)]: {message}")
-            agent_context.append(message)
-            completion = generate_answer(agent_context)
-            assistant_message = construct_assistant_message(completion)
-            print(f"[agent {i} (out)]: {assistant_message}")
-            agent_context.append(assistant_message)
-            # print(completion)
+        # # ---------------
+        # # self-reflection
+        # # ---------------
+        # print(f"Reflection")
+        # for i, agent_context in enumerate(agent_contexts):
+        #     message = construct_message_reflection()
+        #     print(f"[agent {i} ( in)]: {message}")
+        #     agent_context.append(message)
+        #     completion = generate_answer(agent_context)
+        #     assistant_message = construct_assistant_message(completion)
+        #     print(f"[agent {i} (out)]: {assistant_message}")
+        #     agent_context.append(assistant_message)
+        #     # print(completion)
 
         # ------------
         # parse answer
