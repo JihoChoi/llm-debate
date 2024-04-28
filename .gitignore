@@ -1,3 +1,27 @@
+
+
+# -----------------------------------------------
+# Jiho Choi
+# -----------------------------------------------
+# results
+
+env/
+openai-env/
+.vscode/
+
+
+temp/
+keys/
+results/
+datasets/
+
+# KEYS
+src/open_ai.py
+
+
+# -----------------------------------------------
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
