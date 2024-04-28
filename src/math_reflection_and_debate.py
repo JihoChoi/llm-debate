@@ -105,7 +105,7 @@ if __name__ == "__main__":
     # experiment_count = 2
 
     np.random.seed(0)
-    # np.random.seed(4)
+    np.random.seed(12345)
     scores = []
 
     generated_description = {}

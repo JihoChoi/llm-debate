@@ -100,11 +100,12 @@ if __name__ == "__main__":
 
     agents = 3
     rounds = 2
+    experiment_count = 50
     experiment_count = 10
     # experiment_count = 2
 
     np.random.seed(0)
-    np.random.seed(4)
+    np.random.seed(12345)
     scores = []
 
     generated_description = {}
