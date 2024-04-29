@@ -3,7 +3,7 @@
 ### KAIST AI 601 (Spring 2024)
 
 - Team: Eunji Ko, Geewook Kim, Jiho Choi
-  - { kosu7071, geewook, jihochoi } @ kaist.ac.kr
+  - { `kosu7071`, `geewook`, `jihochoi` } @ kaist.ac.kr
 - Toy Experiments for `Arithmetic` Task in Multi-agent Debate
   - `Improving Factuality and Reasoning in Language Models through Multiagent Debate (arXiv 2023)`
 - Presentation ([Slides](https://docs.google.com/presentation/d/1tWZ1p7CoUQHy9WHCUB2MurMLuv9dt_N0yKWSBAmc-5g/edit?usp=sharing))
@@ -32,14 +32,15 @@ python3 ./src/math_debate.py
 ### Project Structure
 
 ```markdown
+.
 ├── README.md
 ├── results
-│ └── .
+│   └── .
 ├── env
-│ └── key.txt
+│   └── key.txt
 └── src
-├── math_debate.py
-└── utils.py
+    ├── math_debate.py
+    └── utils.py
 ```
 
 ### Setup
